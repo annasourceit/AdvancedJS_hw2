@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work 3</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Work 3</h2>
+
+    <script>
+      /*
+        Создать функцию filter(arr, func), которая
+         - принимает в качестве аргументов массив arr и функцию func
+         - возвращает новый массив, который содержит те элементы arr,
+          для которых func возвращает true.
+
+
+      const arr = [11, 66, 33, 44, 22, 55, 2];
+
+      function filter(arr, func) {
+        // to do
+      }
+
+      // Проверка - вернуть массив с элементами значение которых больше 50
+      const filteredArr = filter(arr, function(item) {
+        // to do
+      });
+
+      console.log(filteredArr); //   [66, 55]]
+      */
+
+      const arr = [11, 66, 33, 44, 22, 55, 2];
+
+      function filter(arr, func) {
+             let newArr = [];
+             arr.forEach(function(item){
+                 if(func(item)) {
+                     newArr.push(item);
+                 }
+             });
+             return newArr;
+      }
+
+      // Проверка - вернуть массив с элементами значение которых больше 50
+      const filteredArr = filter(arr, function(item) {
+          return item > 50;
+      });
+
+      console.log(filteredArr); //   [66, 55]]
+
+    </script>
+  </body>
+</html>
