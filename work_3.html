@@ -32,18 +32,18 @@
       const arr = [11, 66, 33, 44, 22, 55, 2];
 
       function filter(arr, func) {
-             let newArr = [];
-             arr.forEach(function(item){
-                 if(func(item)) {
-                     newArr.push(item);
-                 }
-             });
-             return newArr;
+         let newArr = [];
+         arr.forEach(function(item){
+             if(func(item)) {
+                 newArr.push(item);
+             }
+         });
+         return newArr;
       }
 
       // Проверка - вернуть массив с элементами значение которых больше 50
       const filteredArr = filter(arr, function(item) {
-          return item > 50;
+        return item > 50;
       });
 
       console.log(filteredArr); //   [66, 55]]
